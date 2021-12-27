@@ -7,3 +7,34 @@ Secara arsitektur perbedaan utama adalah:
 - EfficientNetV2 lebih memilih rasio ekspansi yang lebih kecil untuk MBConv karena rasio ekspansi yang lebih kecil cenderung memiliki lebih sedikit overhead akses memori.
 - EfficientNetV2 lebih menyukai ukuran kernel 3x3 yang lebih kecil, tetapi menambahkan lebih banyak lapisan untuk mengkompensasi bidang reseptif yang berkurang yang dihasilkan dari ukuran kernel yang lebih kecil.
 - EfficientNetV2 sepenuhnya menghapus tahap stride-1 terakhir di EfficientNet asli, mungkin karena ukuran parameternya yang besar dan overhead akses memori
+
+## Note 
+
+
+
+                 Size  acc-val top-5 acc-test
+EfficientNetV2B0 224  90.68 99.76 89.86
+EfficientNetV2B1 240  90.76 99.78 90.07 
+EfficientNetV2B2 260  87.08 99.48 86.85
+EfficientNetV2B3 300  90.38 99.80 89.29
+EfficientNetV2T  320  92.80 99.86 92.53
+EfficientNetV2S  384  89.94 99.74 89.27
+EfficientNetV2M  480  91.86 99.70 90.53
+EfficientNetV2L  480  93.10 99.80 92.38 
+EfficientNetV2XL 512  93.24 99.72 93.41   
+
+- Train 90%(45000rb)
+- Validation 10%(5000rb) 
+- Test(10000rb) 
+EPOCHS = 25
+INIT_LR = 1e-4
+MAX_LR = 5e-2
+Wd = 1e-5
+bc = 16 * 8(strategy.num_replicas_in_sync) 
+
+optimizers adabelief dengan LearningRateSchduler(Triangular2CyclicalLearningRate) dan Rectified = True
+
+
+## Referensi
+
+- 
