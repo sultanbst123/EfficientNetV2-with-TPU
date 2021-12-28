@@ -24,18 +24,6 @@ Secara arsitektur perbedaan utama adalah:
   | EfficientNetV2XL  | 512   | 93.24  | 99.72 | 93.41    | 
 
 
-| model        | input | val-acc | top-5-acc   | Reported|     
-  | ---------- | ----- | ------- | ------- | ------- | 
-  | EffV2B0    | 224   | 90.68   | 99.76 | 0.94386 |               
-  | EffV2B1    | 240   | 90.76   | 99.78 | 0.94936 |  
-  | EffV2B2    | 260   | 87.08   | 99.48| 0.95262 |
-  | EffV2B3    | 300   | 90.38   | 0.80642 | 0.95262 |                             
-  | EffV2T     | 320   | 92.80   | 0.82506 | 0.96228 |  
-  | EffV2S     | 384   | 89.94   | 0.8386  | 0.967   |               
-  | EffV2M     | 480   | 91.86   | 0.8509  | 0.973   |               
-  | EffV2L     | 480   | 93.10   | 0.855   | 0.97324 |        
-  | EffV2XL    | 512   | 93.24   | 0.86532 | 0.97866 | 
-
 - Train 90%(45000rb)
 - Validation 10%(5000rb) 
 - Test(10000rb) 
@@ -44,17 +32,6 @@ Secara arsitektur perbedaan utama adalah:
 - Batchsize = 16 * 8(strategy.num_replicas_in_sync) 
 
 - optimizers adabelief dengan LearningRateSchduler(Triangular2CyclicalLearningRate) dan Rectified = True(mencegah overshoot)
-
-| V2 Model    | Params | Top1 | Input | ImageNet21K | Imagenet21k-ft1k | Imagenet |
-  | ----------- | ------ | ---- | ----- | ----------- | ---------------- | -------- |
-  | EffV2B0 | 7.1M  | 78.7 | 224 | [v2b0-21k.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-21k.h5)|[v2b0-21k-ft1k.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-21k-ft1k.h5)|[v2b0-imagenet.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-imagenet.h5)|
-  | EffV2B0 | 7.1M  | 78.7 | 224 | [v2b0-21k.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-21k.h5)|[v2b0-21k-ft1k.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-21k-ft1k.h5)|[v2b0-imagenet.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-imagenet.h5)|
-  | EffV2B0 | 7.1M  | 78.7 | 224 | [v2b0-21k.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-21k.h5)|[v2b0-21k-ft1k.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-21k-ft1k.h5)|[v2b0-imagenet.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-imagenet.h5)|
-  | EffV2B0 | 7.1M  | 78.7 | 224 | [v2b0-21k.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-21k.h5)|[v2b0-21k-ft1k.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-21k-ft1k.h5)|[v2b0-imagenet.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-imagenet.h5)|
-  | EffV2B0 | 7.1M  | 78.7 | 224 | [v2b0-21k.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-21k.h5)|[v2b0-21k-ft1k.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-21k-ft1k.h5)|[v2b0-imagenet.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-imagenet.h5)|
-  | EffV2B0 | 7.1M  | 78.7 | 224 | [v2b0-21k.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-21k.h5)|[v2b0-21k-ft1k.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-21k-ft1k.h5)|[v2b0-imagenet.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-imagenet.h5)|
-  | EffV2B0 | 7.1M  | 78.7 | 224 | [v2b0-21k.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-21k.h5)|[v2b0-21k-ft1k.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-21k-ft1k.h5)|[v2b0-imagenet.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-imagenet.h5)|
-  | EffV2B0 | 7.1M  | 78.7 | 224 | [v2b0-21k.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-21k.h5)|[v2b0-21k-ft1k.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-21k-ft1k.h5)|[v2b0-imagenet.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-imagenet.h5)|
 
 
 ## Referensi
