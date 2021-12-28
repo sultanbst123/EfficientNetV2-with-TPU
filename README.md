@@ -33,10 +33,9 @@ Secara arsitektur perbedaan utama adalah:
 - Epochs = 25
 - WeightDecay = 1e-5
 - Batchsize = 16 * 8(strategy.num_replicas_in_sync) 
-
 - optimizers adabelief dengan LearningRateSchduler(Triangular2CyclicalLearningRate) dan Rectified = True(mencegah overshoot)
 
-
+- cifar-10 tidak di sarankan untuk di ubah ukuran nya, saya mengubah ukuran nya hanya untuk milihat apakah bagus/tidak efficientnetv2 saat mempelajari cifar-10
 ## Referensi
 
 - [Official efficientnetv2](https://github.com/google/automl/tree/master/efficientnetv2)
