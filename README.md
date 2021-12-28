@@ -10,7 +10,7 @@ Secara arsitektur perbedaan utama adalah:
 - EfficientNetV2 secara ekstensif menggunakan MBConv dan fusi-MBConv yang baru ditambahkan di lapisan awal.
 - EfficientNetV2 lebih memilih rasio ekspansi yang lebih kecil untuk MBConv karena rasio ekspansi yang lebih kecil cenderung memiliki lebih sedikit overhead akses memori.
 - EfficientNetV2 lebih menyukai ukuran kernel 3x3 yang lebih kecil, tetapi menambahkan lebih banyak lapisan untuk mengkompensasi bidang reseptif yang berkurang yang dihasilkan dari ukuran kernel yang lebih kecil.
-- "EfficientNetV2" sepenuhnya menghapus tahap stride-1 terakhir di "EfficientNet" asli, mungkin karena ukuran parameternya yang besar dan overhead akses memori
+- 'EfficientNetV2' sepenuhnya menghapus tahap stride-1 terakhir di 'EfficientNet' asli, mungkin karena ukuran parameternya yang besar dan overhead akses memori
 
 ## Note 
 
