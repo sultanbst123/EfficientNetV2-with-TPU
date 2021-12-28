@@ -11,17 +11,17 @@ Secara arsitektur perbedaan utama adalah:
 ## Note 
 
 
-| Model               | Size  | acc-val| top-5 | acc-test |
-  | ----------------- | ----- | -----  | ----- | -----    |
-  | EfficientNetV2B0  | 224   | 90.68  | 99.76 | 89.86    | 
-  | EfficientNetV2B1  | 240   | 90.76  | 99.78 | 90.07    |
-  | EfficientNetV2B2  | 260   | 87.08  | 99.48 | 86.85    | 
-  | EfficientNetV2B3  | 300   | 90.38  | 99.80 | 89.29    | 
-  | EfficientNetV2T   | 320   | 92.80  | 99.86 | 92.53    | 
-  | EfficientNetV2S   | 384   | 89.94  | 99.74 | 89.27    | 
-  | EfficientNetV2M   | 480   | 91.86  | 99.70 | 90.53    | 
-  | EfficientNetV2L   | 480   | 93.10  | 99.80 | 92.38    | 
-  | EfficientNetV2XL  | 512   | 93.24  | 99.72 | 93.41    | 
+| Model               | Size  | acc-val| top-5 | acc-test | weight |
+  | ----------------- | ----- | -----  | ----- | -----    | -----   |
+  | EfficientNetV2B0  | 224   | 90.68  | 99.76 | 89.86    | imagenet |
+  | EfficientNetV2B1  | 240   | 90.76  | 99.78 | 90.07    | imagenet |
+  | EfficientNetV2B2  | 260   | 87.08  | 99.48 | 86.85    | imagenet |
+  | EfficientNetV2B3  | 300   | 90.38  | 99.80 | 89.29    | imagenet |
+  | EfficientNetV2T   | 320   | 92.80  | 99.86 | 92.53    | imagenet |
+  | EfficientNetV2S   | 384   | 89.94  | 99.74 | 89.27    | imagenet |
+  | EfficientNetV2M   | 480   | 91.86  | 99.70 | 90.53    | imagenet |
+  | EfficientNetV2L   | 480   | 93.10  | 99.80 | 92.38    | imagenet |
+  | EfficientNetV2XL  | 512   | 93.24  | 99.72 | 93.41    | imagenet21K-ft1k |
 
 
 - Train 90%(45000rb)
