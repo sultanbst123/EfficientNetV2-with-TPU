@@ -39,3 +39,4 @@ optimizers adabelief dengan LearningRateSchduler(Triangular2CyclicalLearningRate
 ## Referensi
 
 - [Official efficientnetv2](https://github.com/google/automl/tree/master/efficientnetv2)
+- [EfficientNetV2: Smaller Models and Faster Training](https://arxiv.org/pdf/2104.00298) 
