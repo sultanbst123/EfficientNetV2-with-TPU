@@ -40,7 +40,8 @@ Secara arsitektur perbedaan utama adalah:
 ## Referensi
 
 - [Official efficientnetv2](https://github.com/google/automl/tree/master/efficientnetv2)
-= [Keras EfficientNetV2](https://github.com/leondgarse/keras_efficientnet_v2) 
+- [Keras EfficientNetV2](https://github.com/leondgarse/keras_efficientnet_v2) 
 - [EfficientNetV2: Smaller Models and Faster Training](https://arxiv.org/pdf/2104.00298) 
 - [EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](https://arxiv.org/pdf/1905.11946) 
 - [EfficientNet: Improving Accuracy and Efficiency through AutoML and Model Scaling](https://ai.googleblog.com/2019/05/efficientnet-improving-accuracy-and.html?m=1) 
+- Google
