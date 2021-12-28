@@ -1,7 +1,7 @@
 # EfficientNetV2-with-TPU
 
 <p align="center">
- <img src="https://github.com/sultanbst123/ViT_Vision-Transformer-and-EANet_External-Attention-Transformer/blob/main/images.png"><i>Vision Transformer Architecture</i>
+ <img src="https://github.com/sultanbst123/EfficientNetV2-with-TPU/blob/main/images.png"><i> EfficientNet </i>
 </p>
 
 EfficientNetV2 adalah jenis jaringan saraf convolutional yang memiliki kecepatan pelatihan lebih cepat dan efisiensi parameter yang lebih baik dari model sebelumnya . Untuk mengembangkan model ini, penulis menggunakan kombinasi pencarian dan penskalaan arsitektur saraf yang sadar pelatihan , untuk bersama-sama mengoptimalkan kecepatan pelatihan. Model dicari dari ruang pencarian yang diperkaya dengan operasi baru seperti Fused-MBConv .
