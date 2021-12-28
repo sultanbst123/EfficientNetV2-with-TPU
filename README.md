@@ -11,16 +11,30 @@ Secara arsitektur perbedaan utama adalah:
 ## Note 
 
 
-                 Size  acc-val top-5 acc-test
-EfficientNetV2B0 224  90.68 99.76 89.86
-EfficientNetV2B1 240  90.76 99.78 90.07 
-EfficientNetV2B2 260  87.08 99.48 86.85
-EfficientNetV2B3 300  90.38 99.80 89.29
-EfficientNetV2T  320  92.80 99.86 92.53
-EfficientNetV2S  384  89.94 99.74 89.27
-EfficientNetV2M  480  91.86 99.70 90.53
-EfficientNetV2L  480  93.10 99.80 92.38 
-EfficientNetV2XL 512  93.24 99.72 93.41   
+| Model               | Size  | acc-val| top-5 | acc-test |
+  | ----------------- | ----- | -----  | ----- | -----    |
+  | EfficientNetV2B0  | 224   | 90.68  | 99.76 | 89.86    | 
+  | EfficientNetV2B1  | 240   | 90.76  | 99.78 | 90.07    |
+  | EfficientNetV2B2  | 260   | 87.08  | 99.48 | 86.85    | 
+  | EfficientNetV2B3  | 300   | 90.38  | 99.80 | 89.29    | 
+  | EfficientNetV2T   | 320   | 92.80  | 99.86 | 92.53    | 
+  | EfficientNetV2S   | 384   | 89.94  | 99.74 | 89.27    | 
+  | EfficientNetV2M   | 480   | 91.86  | 99.70 | 90.53    | 
+  | EfficientNetV2L   | 480   | 93.10  | 99.80 | 92.38    | 
+  | EfficientNetV2XL  | 512   | 93.24  | 99.72 | 93.41    | 
+
+
+| model        | input | val-acc | top-5-acc   | Reported|     
+  | ---------- | ----- | ------- | ------- | ------- | 
+  | EffV2B0    | 224   | 90.68   | 99.76 | 0.94386 |               
+  | EffV2B1    | 240   | 90.76   | 99.78 | 0.94936 |  
+  | EffV2B2    | 260   | 87.08   | 99.48| 0.95262 |
+  | EffV2B3    | 300   | 90.38   | 0.80642 | 0.95262 |                             
+  | EffV2T     | 320   | 92.80   | 0.82506 | 0.96228 |  
+  | EffV2S     | 384   | 89.94   | 0.8386  | 0.967   |               
+  | EffV2M     | 480   | 91.86   | 0.8509  | 0.973   |               
+  | EffV2L     | 480   | 93.10   | 0.855   | 0.97324 |        
+  | EffV2XL    | 512   | 93.24   | 0.86532 | 0.97866 | 
 
 - Train 90%(45000rb)
 - Validation 10%(5000rb) 
