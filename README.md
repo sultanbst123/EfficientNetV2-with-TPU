@@ -11,7 +11,6 @@ Secara arsitektur perbedaan utama adalah:
 ## Note 
 
 
-
                  Size  acc-val top-5 acc-test
 EfficientNetV2B0 224  90.68 99.76 89.86
 EfficientNetV2B1 240  90.76 99.78 90.07 
@@ -27,15 +26,14 @@ EfficientNetV2XL 512  93.24 99.72 93.41
 - Validation 10%(5000rb) 
 - Test(10000rb) 
 - Epochs = 25
-- Initial_LR = 1e-4
-- Max_LR = 5e-2
 - WeightDecay = 1e-5
 - Batchsize = 16 * 8(strategy.num_replicas_in_sync) 
 
+- optimizers adabelief dengan LearningRateSchduler(Triangular2CyclicalLearningRate) dan Rectified = True(mencegah overshoot)
 
-optimizers adabelief dengan LearningRateSchduler(Triangular2CyclicalLearningRate) dan Rectified = True(mencegah overshoot)
-
-
+| V2 Model    | Params | Top1 | Input | ImageNet21K | Imagenet21k-ft1k | Imagenet |
+  | ----------- | ------ | ---- | ----- | ----------- | ---------------- | -------- |
+  | EffV2B0 | 7.1M  | 78.7 | 224 | [v2b0-21k.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-21k.h5)|[v2b0-21k-ft1k.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-21k-ft1k.h5)|[v2b0-imagenet.h5](https://github.com/leondgarse/keras_efficientnet_v2/releases/download/effnetv2_pretrained/efficientnetv2-b0-imagenet.h5)|
 ## Referensi
 
 - [Official efficientnetv2](https://github.com/google/automl/tree/master/efficientnetv2)
