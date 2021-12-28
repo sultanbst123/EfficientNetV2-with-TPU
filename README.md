@@ -26,15 +26,16 @@ EfficientNetV2XL 512  93.24 99.72 93.41
 - Train 90%(45000rb)
 - Validation 10%(5000rb) 
 - Test(10000rb) 
-EPOCHS = 25
-INIT_LR = 1e-4
-MAX_LR = 5e-2
-Wd = 1e-5
-bc = 16 * 8(strategy.num_replicas_in_sync) 
+Epochs = 25
+Initial_LR = 1e-4
+Max_LR = 5e-2
+WeightDecay = 1e-5
+Batchsize = 16 * 8(strategy.num_replicas_in_sync) 
+
 
 optimizers adabelief dengan LearningRateSchduler(Triangular2CyclicalLearningRate) dan Rectified = True
 
 
 ## Referensi
 
-- 
+- [Official efficientnetv2](https://github.com/google/automl/tree/master/efficientnetv2)
